@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Healthgraph::User do
 
-  describe "fetching a user" do
+  describe "fetching a user", :vcr do
 
     # let(:user) { Healthgraph::User.new(ENV['HEALTHGRAPH_TOKEN']) }
 

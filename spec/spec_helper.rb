@@ -11,9 +11,9 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
-# VCR.configure do |c|
-#   c.cassette_library_dir = 'spec/cassettes'
-#   c.hook_into :webmock # or :fakeweb
-#   c.configure_rspec_metadata!
-#   c.default_cassette_options = { :record => :new_episodes }
-# end
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock # or :fakeweb
+  c.configure_rspec_metadata!
+  c.default_cassette_options = { :record => :new_episodes }
+end

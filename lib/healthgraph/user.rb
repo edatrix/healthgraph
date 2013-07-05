@@ -3,7 +3,7 @@ require 'json'
 
 module Healthgraph
   class User
-    attr_reader :access_token, :profile_url
+    attr_reader :access_token, :profile_url, :settings_url
 
     def initialize(token)
       @access_token = token
@@ -30,6 +30,7 @@ module Healthgraph
 
       def set_urls(res)
         @profile_url = res['profile']
+        @settings_url = res['settings']
       end
 
   end

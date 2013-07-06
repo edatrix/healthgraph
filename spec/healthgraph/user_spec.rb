@@ -31,5 +31,10 @@ describe Healthgraph::User do
       expect(user.userID).to be_a(Fixnum)
     end
 
+    it "has an access token", :vcr do
+      user = Healthgraph::User.new(ENV['HEALTHGRAPH_TOKEN'])
+      expect(user.access_token).to be_a(String)
+    end
+
   end
 end

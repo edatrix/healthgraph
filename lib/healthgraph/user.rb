@@ -20,7 +20,6 @@ module Healthgraph
           access_token: @access_token
       }
       res = JSON.parse(res.body)
-      puts res
       set_urls(res)
       @userID = res['userID']
     end

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Fri, 05 Jul 2013 23:46:05 GMT
+      - Sat, 06 Jul 2013 00:02:32 GMT
       Content-Type:
       - application/vnd.com.runkeeper.user+json;charset=ISO-8859-1
       Content-Length:
@@ -34,5 +34,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"strength_training_activities":"/strengthTrainingActivities","weight":"/weight","settings":"/settings","diabetes":"/diabetes","team":"/team","sleep":"/sleep","fitness_activities":"/fitnessActivities","change_log":"/changeLog","goals":"/goals","userID":21041542,"nutrition":"/nutrition","general_measurements":"/generalMeasurements","background_activities":"/backgroundActivities","records":"/records","profile":"/profile"}'
     http_version: 
-  recorded_at: Fri, 05 Jul 2013 23:46:05 GMT
+  recorded_at: Sat, 06 Jul 2013 00:02:32 GMT
 recorded_with: VCR 2.5.0

@@ -10,27 +10,38 @@ module Healthgraph
         :general_measurements_url, :diabetes_url, :records_url, :team_url,
         :change_log_url, :userID
 
-    def initialize(token)
+    def initialize(urls, token)
+      @userID = urls['userID']
       @access_token = token
-      get
+      set_urls(urls)
     end
 
-    def get
-      res = connection.get '/user', {
-          access_token: @access_token
-      }
-      res = JSON.parse(res.body)
-      set_urls(res)
-      @userID = res['userID']
-    end
+    class << self
 
-    protected
+      def get(token)
+        res = connection.get '/user', {
+            access_token: token
+        }
+        res = JSON.parse(res.body)
+        if res['userID']
+          # set_urls(res)
+          # @userID = res['userID']
+          new(res, token)
+        end
+      end
+
+      protected
+
       def connection
         conn ||= Faraday.new(:url => 'https://api.runkeeper.com') do |faraday|
           faraday.request  :url_encoded
           faraday.adapter  Faraday.default_adapter
         end
       end
+
+    end
+
+    protected
 
       def set_urls(res)
         @profile_url                      = res['profile']

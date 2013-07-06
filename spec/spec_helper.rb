@@ -16,4 +16,5 @@ VCR.configure do |c|
   c.hook_into :webmock # or :fakeweb
   c.configure_rspec_metadata!
   c.default_cassette_options = { :record => :new_episodes }
+  c.filter_sensitive_data('<ACCESS_TOKEN>') { ENV['HEALTHGRAPH_TOKEN'] }
 end

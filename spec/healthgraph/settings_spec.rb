@@ -34,9 +34,6 @@ describe Healthgraph::Settings, :vcr do
     expect(settings.distance_units).to be_a(String)
     expect(settings.weight_units).to be_a(String)
     expect(settings.first_day_of_week).to be_a(String)
-
-
-    # expect().to be_a(String)
   end
 
 end

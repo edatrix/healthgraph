@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Sat, 06 Jul 2013 18:50:00 GMT
+      - Sat, 06 Jul 2013 21:54:06 GMT
       Content-Type:
       - application/vnd.com.runkeeper.user+json;charset=ISO-8859-1
       Content-Length:
@@ -33,8 +33,8 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"strength_training_activities":"/strengthTrainingActivities","weight":"/weight","settings":"/settings","diabetes":"/diabetes","team":"/team","sleep":"/sleep","fitness_activities":"/fitnessActivities","change_log":"/changeLog","goals":"/goals","userID":21041542,"nutrition":"/nutrition","general_measurements":"/generalMeasurements","background_activities":"/backgroundActivities","records":"/records","profile":"/profile"}'
-    http_version:
-  recorded_at: Sat, 06 Jul 2013 18:50:02 GMT
+    http_version: 
+  recorded_at: Sat, 06 Jul 2013 21:54:06 GMT
 - request:
     method: get
     uri: https://api.runkeeper.com/settings?access_token=<ACCESS_TOKEN>
@@ -56,7 +56,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Sat, 06 Jul 2013 18:52:31 GMT
+      - Sat, 06 Jul 2013 21:54:06 GMT
       Content-Type:
       - application/vnd.com.runkeeper.settings+json;charset=ISO-8859-1
       Content-Length:
@@ -71,6 +71,6 @@ http_interactions:
         Me","post_general_measurements_twitter":false,"first_day_of_week":"Sunday","post_live_fitness_activity_facebook":false,"post_general_measurements_facebook":false,"share_weight":"Just
         Me","share_nutrition":"Everyone","facebook_connected":false,"share_diabetes":"Just
         Me","distance_units":"mi","post_sleep_facebook":false,"post_diabetes_twitter":false,"post_live_fitness_activity_twitter":false,"post_fitness_activity_twitter":false,"post_weight_twitter":false,"post_background_activity_twitter":false,"post_diabetes_facebook":false,"share_fitness_activities":"Everyone","post_weight_facebook":false,"post_background_activity_facebook":false,"share_map":"Friends","foursquare_connected":false,"share_sleep":"Everyone"}'
-    http_version:
-  recorded_at: Sat, 06 Jul 2013 18:52:33 GMT
+    http_version: 
+  recorded_at: Sat, 06 Jul 2013 21:54:06 GMT
 recorded_with: VCR 2.5.0

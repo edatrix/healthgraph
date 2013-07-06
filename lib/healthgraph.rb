@@ -3,6 +3,7 @@ require "healthgraph/version"
 require "healthgraph/user"
 require "healthgraph/profile"
 require "healthgraph/settings"
+require "healthgraph/records"
 
 module Healthgraph
 

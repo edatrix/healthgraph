@@ -16,10 +16,14 @@ module Healthgraph
       set_urls(urls)
     end
 
+    def profile
+      Healthgraph::Profile.get(@access_token, @profile_url)
+    end
+
     class << self
 
       def get(token)
-        res = connection.get '/user', {
+        res = Healthgraph::connection.get '/user', {
             access_token: token
         }
         res = JSON.parse(res.body)
@@ -27,15 +31,6 @@ module Healthgraph
           # set_urls(res)
           # @userID = res['userID']
           new(res, token)
-        end
-      end
-
-      protected
-
-      def connection
-        conn ||= Faraday.new(:url => 'https://api.runkeeper.com') do |faraday|
-          faraday.request  :url_encoded
-          faraday.adapter  Faraday.default_adapter
         end
       end
 

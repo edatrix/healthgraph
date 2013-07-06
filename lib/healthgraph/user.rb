@@ -26,27 +26,26 @@ module Healthgraph
 
     protected
       def connection
-        #TODO: research consistent prefix and default params to keep it DRY
         conn ||= Faraday.new(:url => 'https://api.runkeeper.com') do |faraday|
-          faraday.request  :url_encoded             # form-encode POST params
-          faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+          faraday.request  :url_encoded
+          faraday.adapter  Faraday.default_adapter
         end
       end
 
       def set_urls(res)
-        @profile_url = res['profile']
-        @settings_url = res['settings']
-        @fitness_activities_url = res['fitness_activities']
+        @profile_url                      = res['profile']
+        @settings_url                     = res['settings']
+        @fitness_activities_url           = res['fitness_activities']
         @strength_training_activities_url = res['strength_training_activities']
-        @background_activities_url = res['background_activities']
-        @sleep_url = res['sleep']
-        @nutrition_url = res['nutrition']
-        @weight_url = res['weight']
-        @general_measurements_url = res['general_measurements']
-        @diabetes_url = res['diabetes']
-        @records_url = res['records']
-        @team_url = res['team']
-        @change_log_url = res['change_log']
+        @background_activities_url        = res['background_activities']
+        @sleep_url                        = res['sleep']
+        @nutrition_url                    = res['nutrition']
+        @weight_url                       = res['weight']
+        @general_measurements_url         = res['general_measurements']
+        @diabetes_url                     = res['diabetes']
+        @records_url                      = res['records']
+        @team_url                         = res['team']
+        @change_log_url                   = res['change_log']
       end
 
   end

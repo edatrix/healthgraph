@@ -7,8 +7,6 @@ describe Healthgraph::User do
 
   describe "fetching a user" do
 
-    # let(:user) { Healthgraph::User.new(ENV['HEALTHGRAPH_TOKEN']) }
-
     it "has urls", :vcr do
       user = Healthgraph::User.new(ENV['HEALTHGRAPH_TOKEN'])
       expect(user.profile_url).to be_a(String)

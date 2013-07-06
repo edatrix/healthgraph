@@ -8,7 +8,7 @@ module Healthgraph
         :fitness_activities_url, :strength_training_activities_url,
         :background_activities_url, :sleep_url, :nutrition_url, :weight_url,
         :general_measurements_url, :diabetes_url, :records_url, :team_url,
-        :change_log_url, :userID, :profile
+        :change_log_url, :userID, :profile, :settings
 
     def initialize(urls, token)
       @userID = urls['userID']
@@ -18,6 +18,10 @@ module Healthgraph
 
     def profile
       @profile ||= Healthgraph::Profile.get(@access_token, @profile_url)
+    end
+
+    def settings
+      @settings ||= Healthgraph::Settings.get(@access_token, @settings_url)
     end
 
     class << self

@@ -4,6 +4,7 @@ require "healthgraph/user"
 require "healthgraph/profile"
 require "healthgraph/settings"
 require "healthgraph/records"
+require "healthgraph/fitness_activities"
 
 module Healthgraph
 

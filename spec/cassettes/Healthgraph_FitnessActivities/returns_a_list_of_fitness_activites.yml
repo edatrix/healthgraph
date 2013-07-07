@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.runkeeper.com/user?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Sun, 07 Jul 2013 17:03:00 GMT
+      Content-Type:
+      - application/vnd.com.runkeeper.user+json;charset=ISO-8859-1
+      Content-Length:
+      - '423'
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+    body:
+      encoding: US-ASCII
+      string: ! '{"strength_training_activities":"/strengthTrainingActivities","weight":"/weight","settings":"/settings","diabetes":"/diabetes","team":"/team","sleep":"/sleep","fitness_activities":"/fitnessActivities","change_log":"/changeLog","goals":"/goals","userID":21041542,"nutrition":"/nutrition","general_measurements":"/generalMeasurements","background_activities":"/backgroundActivities","records":"/records","profile":"/profile"}'
+    http_version: 
+  recorded_at: Sun, 07 Jul 2013 17:03:01 GMT
+- request:
+    method: get
+    uri: https://api.runkeeper.com/fitnessActivities?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Sun, 07 Jul 2013 17:04:19 GMT
+      Content-Type:
+      - application/vnd.com.runkeeper.FitnessActivityFeed+json;charset=ISO-8859-1
+      Content-Length:
+      - '21'
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+    body:
+      encoding: US-ASCII
+      string: ! '{"items":[],"size":0}'
+    http_version: 
+  recorded_at: Sun, 07 Jul 2013 17:04:21 GMT
+recorded_with: VCR 2.5.0

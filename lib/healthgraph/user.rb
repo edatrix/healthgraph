@@ -28,6 +28,11 @@ module Healthgraph
       @records ||= Healthgraph::Records.get(@access_token, @records_url)
     end
 
+    def fitness_activities
+      @fitness_activities ||=
+          Healthgraph::FitnessActivities.get(@access_token, @fitness_activities_url)
+    end
+
     class << self
 
       def get(token)

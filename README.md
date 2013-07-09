@@ -1,16 +1,6 @@
 # Healthgraph
 
-TODO: Write a gem description
-
-Healthgraph::User.new(:access_token => 'TOKEN')
-  should return a user
-  this user has attr_readers for all the healthgraph stuff
-    each of these will probably be their own class
-
-
-Get access token from user
-use that to send request to healthgraph api and get back a user
-  include 'access_token' parameter in request
+In-progress Ruby wrapper for the RunKeeper HealthGraph API
 
 ## Installation
 
